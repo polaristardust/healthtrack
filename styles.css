@@ -24,7 +24,7 @@ a:link, a:visited {
 a:hover {
     text-decoration: none;
     color: #4B6F6D;
-    font-weight: 900; /* this doesn't do anything for some reason */
+    font-weight: bold;
 }
 
 li {
@@ -52,7 +52,7 @@ li:hover::after {
     transform-origin: bottom left;
 }
 
-button {
+#hero-button {
     background-color: #4B6F6D;
     border: none;
     border-radius: 50px;
@@ -63,11 +63,7 @@ button {
 }
 
 #hero-button:hover {
-    background-color: #ED7899;
-}
-
-button:hover {
-    background-color: #89B0AE;
+    background-color: #5f8e8b;
 }
 
 header {
@@ -86,12 +82,26 @@ header {
 #middle {
     background-color: #FAF9F9;
     margin: 0% 10%;
-    padding: 10px 20px 25px 20px;
+    padding: 10px 20px 50px 20px;
     border-radius: 20px;
     box-shadow: 3px 3px 7px #9c9c9c;
     display: flex;
     justify-content: space-around;
     text-align: center;
+}
+
+#mid-button {
+    background-color: #4B6F6D;
+    border: none;
+    border-radius: 50px;
+    color:#FAF9F9;
+    padding: 15px 50px;
+    font-family: 'Nunito';
+    font-size:medium;
+}
+
+#mid-button:hover {
+    background-color: #89B0AE;
 }
 
 footer {
@@ -116,8 +126,27 @@ h1, h2, h3 {
 
 p {
     color:#89B0AE;
+    margin-bottom: 40px;
 }
 
 #hero-p {
     color: #FAF9F9;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #FAF9F9;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #4B6F6D;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5f8e8b;
+  }
