@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles-2.css"/>
     <title>healthtrack</title>
 </head>
 <body>
@@ -13,14 +13,99 @@
         <h1><a href="index.html">healthtrack</a></h1>
         <ul id="nav-bar">
             <li><a href="index.html">home</a></li>
-            <li><a href="index.html">symptom checker</a></li>
+            <li><a href="symptom-checker.html">symptom checker</a></li>
             <li><a href="index.html">health tracker</a></li>
         </ul>
     </header>
 
+    <main>
+        <div id="intro">
+            <div id="intro-top">
+                <img src="images/stethoscope.png">
+                <h3>symptom checker</h3>
+            </div>
+            <hr>
+            <p>lorem ipsum dolor sit amet.</p>
+            <div id="filters">
+                <a id="all">all</a>
+                <a id="runny-nose">runny nose</a>
+                <a id="sneezing">sneezing</a>
+                <a id="fever">fever</a>
+                <a id="headache">headache</a>
+            </div>
+        </div>
+
+        <div id="illnesses">
+            <div class="all runny-nose sneezing">
+                <h3>allergies</h3>
+                <p>allergies are an immune response triggered by allergens, an ordinarily harmful substance</p>
+                <div class="symptoms">
+                    <p class="symptom">runny nose</p>
+                    <p class="symptom">sneezing</p>
+                </div>
+            </div>
+
+            <div class="all fever headache">
+                <h3>cold and flu</h3>
+                <p>both of these illnesses are upper respiratory infections, meaning they involve your nose, throat, and lungs. viruses cause both colds and flu by increasing inflammation of the membranes in the nose and throat.</p>
+                <div class="symptoms">
+                    <p class="symptom">fever</p>
+                    <p class="symptom">headache</p>
+                </div>
+            </div>
+
+            <div class="all itchiness redness">
+                <h3>conjunctivitis (“pink eye“)</h3>
+                <p>Conjunctivitis, an inflammation of the transparent membrane (conjunctiva) that lines your eyelids and part of your eyeballs, has several possible causes. It could be a bacterial or viral infection, an allergic reaction to pollen or animal dander, or a result of chemical irritants (smoke, chlorine, lens solution, etc.)</p>
+                <div class="symptoms">
+                    <p class="symptom">itchiness</p>
+                    <p class="symptom">redness</p>
+                </div>
+            </div>
+
+            <div class="all fatigue fever">
+                <h3>mononucleosis</h3>
+                <p>Mononucleosis is an illness caused by the Epstein-Barr virus (EBV), which is spread through saliva.</p>
+                <div class="symptoms">
+                    <p class="symptom">fatigue</p>
+                    <p class="symptom">fever</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let allIllnesses = document.querySelectorAll(".all");
+        let filterbtn = document.querySelectorAll("a");
+
+        function filter(event) {
+            let selected = event.target.id;
+                    allIllnesses.forEach(function(symptom) {
+                        let illnessSymptom = symptom.classList;
+                        let active = illnessSymptom.contains("active");
+
+                        if(illnessSymptom.contains(selected) && !illnessSymptom.contains("active")) {
+                            symptom.style.display = "block";
+                            symptom.classList.add("active");
+                        } else {
+                            symptom.style.display = "none";
+                    }
+                active.style.display = "block";
+                });
+        };
+
+        filterbtn.forEach(function(tag){
+            tag.addEventListener('click', filter);
+        });
+    </script>
+
     <footer>
-        <p>created for cfa winter quarter 2023 by winnie tran</p>
-        <img src="images/trust.png">
+        <div id="footer-text">
+            <h3>placeholder text</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p id="red-text">created for cfa winter quarter 2023 by winnie tran</p>
+        </div>
+        <img src="images/trust.png" width="84px" height="84px">
     </footer>
 </body>
 </html>

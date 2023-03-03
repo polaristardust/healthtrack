@@ -3,16 +3,16 @@
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        #89B0AE 0%,
-        #89B0AE 70%,
-        #FAF9F9 70%,
-        #FAF9F9 100%
-    );
     font-family: 'Nunito';
+    background-color: #FAF9F9;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #89B0AE;
 }
 
 a:link, a:visited {
@@ -51,60 +51,64 @@ li:hover::after {
     transform-origin: bottom left;
 }
 
-#hero-button {
+#intro {
+    margin: 5% 7%;
+}
+
+#intro-top {
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    width: 30%;
+    background-color:#FAF9F9;
+    height: 3px;
     background-color: #4B6F6D;
-    border: none;
     border-radius: 50px;
-    color:#FAF9F9;
-    padding: 15px 50px;
-    font-family: 'Nunito';
-    font-size:medium;
 }
 
-#hero-button:hover {
-    background-color: #5f8e8b;
-}
-
-header {
+#illnesses {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-#hero {
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    margin: 5% 10%;
     justify-content: center;
 }
 
-#middle {
+.all {
+    width: 40%;
     background-color: #FAF9F9;
-    margin: 0% 10%;
-    padding: 25px 20px;
     border-radius: 20px;
-    box-shadow: 3px 3px 7px #9c9c9c;
-    display: flex;
-    justify-content: space-around;
+    box-shadow: 1px 1px 4px #9c9c9c;
     text-align: center;
-    flex-direction: column;
+    padding: 20px;
+    margin: 2%;
 }
 
-#mid-button {
+.symptoms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.symptom {
     background-color: #4B6F6D;
-    border: none;
     border-radius: 50px;
-    color:#FAF9F9;
-    padding: 15px 50px;
-    font-family: 'Nunito';
-    font-size:medium;
-    display: block;
-    width: fit-content;
-    margin: auto;
+    color: #FAF9F9;
+    padding: 1% 10%;
 }
 
-#mid-button:hover {
-    background-color: #89B0AE;
+.active {
+    display: block;
+}
+
+h3 {
+    color: #4B6F6D;
+}
+
+p {
+    color: #89B0AE;
 }
 
 footer {
@@ -123,19 +127,6 @@ footer {
     font-weight: bold;
 }
 
-h1, h2, h3 {
-    color: #4B6F6D;
-}
-
-p {
-    color:#89B0AE;
-    margin-bottom: 40px;
-}
-
-#hero-p {
-    color: #FAF9F9;
-}
-
 ::-webkit-scrollbar {
     width: 10px;
   }
@@ -152,19 +143,4 @@ p {
   
   ::-webkit-scrollbar-thumb:hover {
     background: #5f8e8b;
-  }
-
-  @media (min-width: 800px){
-    #middle {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    #middle>div {
-        width: 49%;
-    }
-
-    #left-box {
-        border-right: solid 1px #89B0AE;
-    }
   }
