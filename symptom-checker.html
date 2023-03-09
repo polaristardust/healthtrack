@@ -27,11 +27,16 @@
             <hr>
             <p>lorem ipsum dolor sit amet.</p>
             <div id="filters">
-                <a id="all">all</a>
-                <a id="runny-nose">runny nose</a>
-                <a id="sneezing">sneezing</a>
-                <a id="fever">fever</a>
-                <a id="headache">headache</a>
+                <input type="checkbox" id="all" value="all">
+                <label for="all" label>all</label>
+                <input type="checkbox" id="runny-nose" value="runny-nose">
+                <label for="runny-nose" label>runny nose</label>
+                <input type="checkbox" id="sneezing" value="sneezing">
+                <label for="sneezing" label>sneezing</label>
+                <input type="checkbox" id="fever" value="fever">
+                <label for="fever" label>fever</label>
+                <input type="checkbox" id="headache" value="headache">
+                <label for="headache" label>headache</label>
             </div>
         </div>
 
@@ -75,7 +80,7 @@
     </main>
 
     <script>
-        let allIllnesses = document.querySelectorAll(".all");
+       /* let allIllnesses = document.querySelectorAll(".all");
         let filterbtn = document.querySelectorAll("a");
 
         function filter(event) {
@@ -96,7 +101,80 @@
 
         filterbtn.forEach(function(tag){
             tag.addEventListener('click', filter);
+        }); */
+
+        const filterBtns = document.querySelectorAll("#filters>input");
+        const resultsContainer = document.querySelector('#illnesses');
+        
+        
+        //Add event listener to filter btns
+        filterBtns.forEach(function (btn) {
+            btn.addEventListener('click', filter);
         });
+
+        function filter() {
+            /* Remove all illnesses, it's best practice to take elements off the page first
+            first, then manipulate in DOM, then add back in with appendChild */
+            
+            //Get current results
+            const results = Array.from(resultsContainer.children);
+
+            /* while (resultsContainer.hasChildNodes()) {
+                resultsContainer.removeChild(resultsContainer.firstChild);
+            } */
+            //Build array of current clicked filter btns
+            let activeFilters = [];
+            filterBtns.forEach(function (btn) {
+                if (btn.checked) {
+                    activeFilters.push(btn.id);
+                }
+            });
+
+        
+            // Remove active class
+            let active = results.forEach(function(result){
+                result.classList.remove('active');
+            });
+
+            //Loop through illnesses/divs
+            results.forEach(function (item) { 
+                //Get list of classes for each div and convert to an array
+                let list = Array.from(item.classList);
+                //Loop through clicked filter btns and check to see if included in class list
+
+                let hasActiveFilters = true;
+
+                for (let newItem of activeFilters) {
+                    /* if (list.includes('active')){
+                        //Skip if already active
+                        continue;
+                    }
+                    else if (list.includes(newItem)) {
+                        //If not active yet, add class active
+                        item.classList.add('active');
+                    }  */
+                    if (!list.includes(newItem)) {
+                        hasActiveFilters = false;
+                        break;
+                    }
+                    
+                };
+
+                if (hasActiveFilters == true) {
+                    item.classList.add('active');
+                }
+            });
+            //Put the altered divs back on the page
+            /* results.forEach(function (result) {
+                resultsContainer.appendChild(result);
+            }) */
+            
+            //Make sure we have the stuff we need
+            console.log(activeFilters);
+            console.log(results);
+        }
+
+
     </script>
 
     <footer>

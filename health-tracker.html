@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
     <title>healthtrack</title>
 </head>
-<body class="home-page">
-    <header>
+<body class="symptom-page">
+    <header class="symptom-page">
         <h1><a class="nav-link" href="index.html">healthtrack</a></h1>
         <ul id="nav-bar">
             <li><a class="nav-link" href="index.html">home</a></li>
@@ -17,33 +17,23 @@
             <li><a class="nav-link" href="health-tracker.html">health tracker</a></li>
         </ul>
     </header>
+
     <main>
-        <div id="hero">
-            <img src="images/hero-image.png" alt="heart on a piece of paper with clouds">
-            <div id="hero-text">
-                <h1>hero text placeholder</h1>
-                <p id="hero-p">lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-                <a id="hero-button" href="index.html">some button</a>
-            </div>
-        </div>
-
-        <div id="middle">
-            <div id="left-box">
-                <h3>symptom checker</h3>
+        <div id="intro">
+            <div id="intro-top">
                 <img src="images/stethoscope.png">
-                <p>lorem ipsum dolor sit amet.</p>
-                <a class="mid-button" href="symptom-checker.html">some button</a>
-            </div>
-
-            <div>
                 <h3>health tracker</h3>
-                <img src="images/health-book.png">
-                <p>lorem ipsum dolor sit amet.</p>
-                <a class="mid-button" href="health-tracker.html">some button</a>
             </div>
+            <hr>
+            <p>lorem ipsum dolor sit amet.</p>
         </div>
+
+        <div id="trackers">
+            <input type="range" id="sleep" name="sleep" min="0" max="18">
+        </div>
+
     </main>
-    
+
     <footer>
         <div id="footer-text">
             <h3>placeholder text</h3>
