@@ -14,7 +14,7 @@
         <ul id="nav-bar">
             <li><a class="nav-link" href="index.html">home</a></li>
             <li><a class="nav-link" href="symptom-checker.html">symptom checker</a></li>
-            <li><a class="nav-link" href="index.html">health tracker</a></li>
+            <li><a class="nav-link" href="health-tracker.html">health tracker</a></li>
         </ul>
     </header>
 
@@ -22,58 +22,106 @@
         <div id="intro">
             <div id="intro-top">
                 <img src="images/stethoscope.png">
-                <h3>symptom checker</h3>
+                <h3>Symptom checker</h3>
             </div>
             <hr>
-            <p>lorem ipsum dolor sit amet.</p>
+            <p>Learn the basics about common illnesses and their symptoms. Click a filter to get started!</p>
             <div id="filters">
                 <input type="checkbox" id="all" value="all">
                 <label for="all" label>all</label>
-                <input type="checkbox" id="runny-nose" value="runny-nose">
-                <label for="runny-nose" label>runny nose</label>
-                <input type="checkbox" id="sneezing" value="sneezing">
-                <label for="sneezing" label>sneezing</label>
+                <input type="checkbox" id="chills" value="chills">
+                <label for="chills" label>chills</label>
+                <input type="checkbox" id="cough" value="cough">
+                <label for="cough" label>cough</label>
+                <input type="checkbox" id="diarrhea" value="diarrhea">
+                <label for="diarrhea" label>diarrhea</label>
+                <input type="checkbox" id="eye-irritation" value="eye-irritation">
+                <label for="eye-irritation" label>eye irritation</label>
+                <input type="checkbox" id="fatigue" value="fatigue">
+                <label for="fatigue" label>fatigue</label>
                 <input type="checkbox" id="fever" value="fever">
                 <label for="fever" label>fever</label>
                 <input type="checkbox" id="headache" value="headache">
                 <label for="headache" label>headache</label>
+                <input type="checkbox" id="nausea" value="nausea">
+                <label for="nausea" label>nausea</label>
+                <input type="checkbox" id="runny-nose" value="runny-nose">
+                <label for="runny-nose" label>runny nose</label>
+                <input type="checkbox" id="sneezing" value="sneezing">
+                <label for="sneezing" label>sneezing</label>
+                <input type="checkbox" id="sore-throat" value="sore-throat">
+                <label for="sore-throat" label>sore throat</label>
+                <input type="checkbox" id="vomiting" value="vomiting">
+                <label for="vomiting" label>vomiting</label>
             </div>
         </div>
 
         <div id="illnesses">
-            <div class="all runny-nose sneezing">
+            <div class="all runny-nose sneezing sore-throat itchiness eye-irritation">
                 <h3>allergies</h3>
                 <p>allergies are an immune response triggered by allergens, an ordinarily harmful substance</p>
                 <div class="symptoms">
                     <p class="symptom">runny nose</p>
                     <p class="symptom">sneezing</p>
+                    <p class="symptom">sore throat</p>
+                    <p class="symptom">itchiness</p>
+                    <p class="symptom">eye irritation</p>
                 </div>
             </div>
 
-            <div class="all fever headache">
+            <div class="all fever headache cough fatigue runny-nose sneezing">
                 <h3>cold and flu</h3>
                 <p>both of these illnesses are upper respiratory infections, meaning they involve your nose, throat, and lungs. viruses cause both colds and flu by increasing inflammation of the membranes in the nose and throat.</p>
                 <div class="symptoms">
                     <p class="symptom">fever</p>
                     <p class="symptom">headache</p>
+                    <p class="symptom">cough</p>
+                    <p class="symptom">fatigue</p>
+                    <p class="symptom">runny-nose</p>
+                    <p class="symptom">sneezing</p>
                 </div>
             </div>
 
-            <div class="all itchiness redness">
+            <div class="all itchiness redness eye-irritation">
                 <h3>conjunctivitis (“pink eye“)</h3>
                 <p>Conjunctivitis, an inflammation of the transparent membrane (conjunctiva) that lines your eyelids and part of your eyeballs, has several possible causes. It could be a bacterial or viral infection, an allergic reaction to pollen or animal dander, or a result of chemical irritants (smoke, chlorine, lens solution, etc.)</p>
                 <div class="symptoms">
                     <p class="symptom">itchiness</p>
                     <p class="symptom">redness</p>
+                    <p class="symptom">eye irritation</p>
                 </div>
             </div>
 
-            <div class="all fatigue fever">
+            <div class="all fatigue fever sore-throat">
                 <h3>mononucleosis</h3>
                 <p>Mononucleosis is an illness caused by the Epstein-Barr virus (EBV), which is spread through saliva.</p>
                 <div class="symptoms">
                     <p class="symptom">fatigue</p>
                     <p class="symptom">fever</p>
+                    <p class="symptom">sore throat</p>
+                </div>
+            </div>
+
+            <div class="all fatigue fever sore-throat cough chills">
+                <h3>covid-19</h3>
+                <p>Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.</p>
+                <div class="symptoms">
+                    <p class="symptom">fatigue</p>
+                    <p class="symptom">fever</p>
+                    <p class="symptom">sore throat</p>
+                    <p class="symptom">cough</p>
+                    <p class="symptom">chills</p>
+                </div>
+            </div>
+
+            <div class="all fever diarrhea nausea vomiting">
+                <h3>stomach flu</h3>
+                <p>An intestinal infection typically spread by contact with an infected person or through contaminated food or water.</p>
+                <div class="symptoms">
+                    <p class="symptom">fever</p>
+                    <p class="symptom">diarrhea</p>
+                    <p class="symptom">nausea</p>
+                    <p class="symptom">vomiting</p>
                 </div>
             </div>
         </div>
@@ -179,8 +227,8 @@
 
     <footer>
         <div id="footer-text">
-            <h3>placeholder text</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h3>healthtrack website</h3>
+            <p>This is my first independent project during my time in Computing For All. Many thanks to our instructor Lynn for teaching us many HTML, CSS, and JavaScript concepts that we can practice and incorporate into our projects and being very patient with us during the learning process!</p>
             <p id="red-text">created for cfa winter quarter 2023 by winnie tran</p>
         </div>
         <img src="images/trust.png" width="84px" height="84px">

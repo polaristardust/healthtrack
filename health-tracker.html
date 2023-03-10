@@ -22,22 +22,32 @@
         <div id="intro">
             <div id="intro-top">
                 <img src="images/stethoscope.png">
-                <h3>health tracker</h3>
+                <h3>Health tracker</h3>
             </div>
             <hr>
-            <p>lorem ipsum dolor sit amet.</p>
+            <p>Keep track of your day-to-day health metrics and see trends.</p>
         </div>
 
         <div id="trackers">
-            <input type="range" id="sleep" name="sleep" min="0" max="18">
+            <div class="tracker">
+                <h4>Sleep</h4>
+                <p>amount of sleep in hours</p>
+                <input type="range" id="sleep" name="sleep" value="8" min="0" max="16">
+            </div>
+            
+            <div class="tracker">
+                <h4>Water</h4>
+                <p>amount of water in cups</p>
+                <input type="range" id="water" name="water" value="8" min="0" max="16">
+            </div>
         </div>
 
     </main>
 
     <footer>
         <div id="footer-text">
-            <h3>placeholder text</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h3>healthtrack website</h3>
+            <p>This is my first independent project during my time in Computing For All. Many thanks to our instructor Lynn for teaching us many HTML, CSS, and JavaScript concepts that we can practice and incorporate into our projects and being very patient with us during the learning process!</p>
             <p id="red-text">created for cfa winter quarter 2023 by winnie tran</p>
         </div>
         <img src="images/trust.png" width="84px" height="84px">
